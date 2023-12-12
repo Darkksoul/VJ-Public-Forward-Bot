@@ -2,7 +2,7 @@ from os import environ
 class Config(object):
     API_ID = environ.get("API_ID", "")
     API_HASH = environ.get("API_HASH", "")
-    BOT_TOKEN = environ.get("BOT_TOKEN", "")
+    BOT_TOKEN = environ.get("BOT_TOKEN", "6528834774:AAGEbot3hjVo5HvHPl30aCbZwVK0grZPjg4")
     STRING_SESSION = environ.get("STRING_SESSION", "")
     SUDO_USERS = environ.get("SUDO_USERS", "")
     COMMAND_HAND_LER = environ.get("COMMAND_HAND_LER", "^/")
