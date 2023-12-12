@@ -3,7 +3,6 @@ from telethon.tl.functions.users import GetFullUserRequest
 from forwardbot.utils import forwardbot_cmd
 from forwardbot.utils import is_sudo
 from forwardbot import bot
-from ethon.mystarts import start_srb
 
 MessageCount = 0
 
@@ -18,8 +17,6 @@ async def start(event):
     await start_srb(event, text)
 
 
-
-
 @forwardbot_cmd("help", is_args=False)
 async def handler(event):
     await event.respond(help_msg)
@@ -28,13 +25,9 @@ async def handler(event):
 async def handler(event):
     await event.respond(bot.owner)
 
-
-
 @forwardbot_cmd("admin", is_args=False)
 async def handler(event):
     if str(event.sender_id) in sudo_users:
         await event.respond("You are an admin")
     else:
         await event.respond("You are not an admin")
-
-
